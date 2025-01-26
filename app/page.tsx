@@ -21,14 +21,19 @@ export default function Home() {
       </div>
 
       <div className="relative flex flex-col items-center justify-center gap-8">
-        <Image
-          className="rounded-full border-4 border-white shadow-lg"
-          src="/images/noah-nelson.jpg"
-          alt="Noah Nelson"
-          width={240}
-          height={240}
-          priority
-        />
+        <div className="relative w-[300px] h-[300px]">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl transform -rotate-6"></div>
+          <div className="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden">
+            <Image
+              className="rounded-full"
+              src="/images/me2.jpg"
+              alt="Main Photo"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </div>
+        </div>
         <h1 className="text-4xl font-bold text-center">Noah Nelson</h1>
         <p className="text-xl text-gray-600 text-center max-w-2xl">
           Web developer and software engineer passionate about creating innovative solutions. Specializing in modern web
