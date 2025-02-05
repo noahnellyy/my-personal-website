@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       <div className="relative flex flex-col items-center justify-center gap-8">
-        <div className="relative w-[300px] h-[300px]">
+        <div className="relative w-[200px] h-[200px]">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl transform -rotate-6"></div>
           <div className="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden">
             <Image

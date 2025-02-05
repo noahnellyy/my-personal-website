@@ -1,58 +1,81 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A brief description of Project 1 and its key features.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Project One",
+    description: "Full-stack web application",
+    color: "bg-secondary",
     link: "#",
+    image: "/placeholder.svg?height=400&width=400",
   },
   {
-    title: "Project 2",
-    description: "A brief description of Project 2 and its key features.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Project Two",
+    description: "Mobile app development",
+    color: "bg-primary",
     link: "#",
+    image: "/placeholder.svg?height=400&width=400",
   },
   {
-    title: "Project 3",
-    description: "A brief description of Project 3 and its key features.",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "Project Three",
+    description: "UI/UX design system",
+    color: "bg-muted",
     link: "#",
+    image: "/placeholder.svg?height=400&width=400",
+  },
+  {
+    title: "Project Four",
+    description: "API integration",
+    color: "bg-accent",
+    link: "#",
+    image: "/placeholder.svg?height=400&width=400",
+  },
+  {
+    title: "Project Five",
+    description: "Mobile development",
+    color: "bg-destructive",
+    link: "#",
+    image: "/placeholder.svg?height=400&width=400",
+  },
+  {
+    title: "Project Six",
+    description: "Android application",
+    color: "bg-card",
+    link: "#",
+    image: "/placeholder.svg?height=400&width=400",
   },
 ]
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">My Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="min-h-screen p-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold mb-12">Projects</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <Image
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <a
-                  href={project.link}
-                  className="text-blue-500 hover:text-blue-600 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn more →
-                </a>
+            <Link href={project.link} key={index} className="project-card">
+              <div className={`project-card-content ${project.color}`}>
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={200}
+                    height={200}
+                    className="project-card-image"
+                  />
+                </div>
               </div>
-            </div>
+
+              <div className="project-card-overlay">
+                <div className="text-center text-white">
+                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
     </div>
   )
 }
-
