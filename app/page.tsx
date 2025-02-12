@@ -60,8 +60,8 @@ export default function Home() {
         </div>
         <h1 className="text-4xl font-bold text-center">Noah Nelson</h1>
         <p className="text-xl text-gray-600 text-center max-w-2xl">
-          Web developer and software engineer passionate about creating innovative solutions. Specializing in modern web
-          technologies and always eager to learn and grow in the field.
+          Mobile developer and software engineer passionate about building innovative and user-friendly applications. 
+          Specializing in modern mobile technologies with experience in Jetpack Compose, and always eager to learn and grow in the field.
         </p>
       </div>
 
@@ -120,6 +120,20 @@ export default function Home() {
             Get in touch →
           </Link>
         </div>
+        <Link
+          href="/resume"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+        >
+          <h2 className={`mb-3 text-2xl font-semibold`}>
+            Resume{" "}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              -&gt;
+            </span>
+          </h2>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            View Noah&apos;s professional experience and education.
+          </p>
+        </Link>
       </div>
     </main>
   )
