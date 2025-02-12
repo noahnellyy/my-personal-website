@@ -110,16 +110,6 @@ export default function Home() {
             Learn more about my background →
           </Link>
         </div>
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Interested in collaborating or have a project in mind? I'd love to hear from you! Feel free to reach out for
-            any inquiries or just to say hello.
-          </p>
-          <Link href="/contact" className="text-blue-500 hover:text-blue-600 transition-colors">
-            Get in touch →
-          </Link>
-        </div>
         <Link
           href="/resume"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -134,6 +124,16 @@ export default function Home() {
             View Noah&apos;s professional experience and education.
           </p>
         </Link>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+          <h2 className="text-2xl font-bold mb-4">Contact</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            Interested in collaborating or have a project in mind? I'd love to hear from you! Feel free to reach out for
+            any inquiries or just to say hello.
+          </p>
+          <Link href="/contact" className="text-blue-500 hover:text-blue-600 transition-colors">
+            Get in touch →
+          </Link>
+        </div>
       </div>
     </main>
   )

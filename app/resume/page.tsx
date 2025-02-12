@@ -1,6 +1,6 @@
 export default function Resume() {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12 font-sans">
+      <div className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-12">Noah Nelson</h1>
   
         {/* Contact Section */}
@@ -34,7 +34,7 @@ export default function Resume() {
               <div className="mb-16 relative">
                 <div className="absolute left-0 w-12 text-right">
                   <div className="absolute -left-3 top-[0.6rem] w-[5px] h-[1px] bg-black"></div>
-                  <span className="text-sm">Now</span>
+                  <span className="text-sm whitespace-nowrap ml-[10px]">Now   .</span>
                 </div>
                 <div className="absolute left-[1.5rem] top-8 bottom-0 w-[1px] bg-black"></div>
                 <div className="ml-16">
@@ -87,15 +87,15 @@ export default function Resume() {
                 <div className="absolute left-[1.5rem] top-8 bottom-0 w-[1px] bg-black"></div>
                 <div className="ml-16">
                     <h3 className="font-bold">RIIS LLC — Software Engineer Intern</h3>
-                    <p className="mb-2 italic">Developed drone control applications and Android solutions.</p>
+                    <p className="mb-2 italic font-light">Developed drone control applications and Android solutions.</p>
                     <ul className="list-none space-y-1 pl-5">
-                        <li className="relative pl-3">
+                        <li className="relative pl-3 font-light">
                             <span className="absolute left-0">•</span> Built waypoint application for drone flight control
                         </li>
-                        <li className="relative pl-3">
+                        <li className="relative pl-3 font-light">
                             <span className="absolute left-0">•</span> Developed Android applications using Kotlin for DJI drone systems
                         </li>
-                        <li className="relative pl-3">
+                        <li className="relative pl-3 font-light">
                             <span className="absolute left-0">•</span> Implemented ArduPilot application features in QML
                         </li>
                     </ul>
