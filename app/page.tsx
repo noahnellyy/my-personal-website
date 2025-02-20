@@ -27,24 +27,19 @@ const projects = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex mb-12">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Welcome to Noah Nelson&apos;s personal website
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <Link
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://github.com/noahnellyy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By Noah Nelson
-          </Link>
+    <main className="flex min-h-screen flex-col p-8 md:p-24 w-full">
+      
+      {/* Header Section - Centered */}
+      <div className="w-full flex justify-center">
+        <div className="z-10 max-w-5xl w-full text-center font-mono text-sm lg:flex mb-12">
+          <p className="fixed left-0 top-0 w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            Welcome to Noah Nelson&apos;s personal website
+          </p>
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center justify-center gap-8 mb-16">
+      {/* Profile Section - Left-Aligned */}
+      <div className="relative flex flex-col gap-8 mb-16 w-full max-w-5xl">
         <div className="relative w-[200px] h-[200px]">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl transform -rotate-6"></div>
           <div className="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden">
@@ -58,16 +53,17 @@ export default function Home() {
             />
           </div>
         </div>
-        <h1 className="text-4xl font-bold text-center">Noah Nelson</h1>
-        <p className="text-xl text-gray-600 text-center max-w-2xl">
+        <h1 className="text-4xl font-bold">Noah Nelson</h1>
+        <p className="text-xl text-gray-600 max-w-2xl">
           Mobile developer and software engineer passionate about building innovative and user-friendly applications. 
           Specializing in modern mobile technologies with experience in Jetpack Compose, and always eager to learn and grow in the field.
         </p>
       </div>
 
-      <div className="w-full max-w-5xl mb-16 flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+      {/* Projects Section - Left-Aligned */}
+      <div className="w-full max-w-5xl mb-16">
+        <h2 className="text-3xl font-bold mb-8">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <Link
               href={project.link}
@@ -98,8 +94,8 @@ export default function Home() {
         </div>
       </div>
 
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+      {/* About, Resume & Contact Sections - Stacked Vertically */}
+      <div className="flex flex-col gap-8 w-full max-w-5xl">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <h2 className="text-2xl font-bold mb-4">About Me</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -110,20 +106,22 @@ export default function Home() {
             Learn more about my background →
           </Link>
         </div>
+
         <Link
           href="/resume"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2 className="mb-3 text-2xl font-semibold">
             Resume{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
             View Noah&apos;s professional experience and education.
           </p>
         </Link>
+
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <h2 className="text-2xl font-bold mb-4">Contact</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -135,6 +133,21 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+
+      {/* Footer Section - Centered */}
+      <div className="w-full flex justify-center mt-16">
+        <div className="fixed bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:w-auto lg:bg-none">
+          <Link
+            className="flex place-items-center gap-2 p-8 lg:p-0"
+            href="https://github.com/noahnellyy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            By Noah Nelson
+          </Link>
+        </div>
+      </div>
     </main>
-  )
+  );
 }
