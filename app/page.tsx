@@ -27,127 +27,82 @@ const projects = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col p-8 md:p-24 w-full">
-      
-      {/* Header Section - Centered */}
-      <div className="w-full flex justify-center">
-        <div className="z-10 max-w-5xl w-full text-center font-mono text-sm lg:flex mb-12">
-          <p className="fixed left-0 top-0 w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-            Welcome to Noah Nelson&apos;s personal website
-          </p>
-        </div>
-      </div>
-
-      {/* Profile Section - Left-Aligned */}
-      <div className="relative flex flex-col gap-8 mb-16 w-full max-w-5xl">
-        <div className="relative w-[200px] h-[200px]">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl transform -rotate-6"></div>
-          <div className="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden">
-            <Image
-              className="rounded-full"
-              src="/images/me2.jpg"
-              alt="Main Photo"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
+    <div className="min-h-screen">
+      {/* Navigation */}
+      <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50">
+        <div className="max-w-5xl mx-auto px-8 py-4 flex justify-between items-center">
+          <Link href="/" className="text-xl font-medium">
+            Noah Nelson
+          </Link>
+          <div className="space-x-4 text-sm">
+            <Link href="/about" className="hover:text-gray-600">
+              about.
+            </Link>
+            <Link href="/resume" className="hover:text-gray-600">
+              résumé.
+            </Link>
+            <Link href="/contact" className="hover:text-gray-600">
+              contact.
+            </Link>
           </div>
         </div>
-        <h1 className="text-4xl font-bold">Noah Nelson</h1>
-        <p className="text-xl text-gray-600 max-w-2xl">
-          Mobile developer and software engineer passionate about building innovative and user-friendly applications. 
-          Specializing in modern mobile technologies with experience in Jetpack Compose, and always eager to learn and grow in the field.
-        </p>
-      </div>
+      </nav>
 
-      {/* Projects Section - Left-Aligned */}
-      <div className="w-full max-w-5xl mb-16">
-        <h2 className="text-3xl font-bold mb-8">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <Link
-              href={project.link}
-              key={index}
-              className="group relative w-[250px] h-[250px] md:w-[220px] md:h-[220px] overflow-hidden rounded-lg flex items-center justify-center"
-            >
-              <div
-                className={`absolute inset-0 ${project.color} transition-transform duration-300 group-hover:scale-95`}
-              >
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={180}
-                    height={180}
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-black bg-opacity-0 transition-all duration-300 group-hover:bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                <div className="text-center text-white">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-sm">{project.description}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* About, Resume & Contact Sections - Stacked Vertically */}
-      <div className="flex flex-col gap-8 w-full max-w-5xl">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold mb-4">About Me</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
-            I'm a passionate web developer with expertise in modern technologies. My journey in tech has led me to work
-            on diverse projects, always pushing the boundaries of what's possible on the web.
+      <main className="pt-24 px-8 max-w-5xl mx-auto">
+        {/* Profile Section */}
+        <div className="mb-16">
+          <div className="relative w-[200px] h-[200px] mb-8">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl transform -rotate-6"></div>
+            <div className="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden">
+              <Image
+                className="rounded-full"
+                src="/images/me2.jpg"
+                alt="Main Photo"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
+          </div>
+          <p className="text-xl text-gray-600 max-w-2xl">
+            Mobile developer and software engineer passionate about building innovative and user-friendly applications.
+            Specializing in modern mobile technologies with experience in Jetpack Compose, and always eager to learn and
+            grow in the field.
           </p>
-          <Link href="/about" className="text-blue-500 hover:text-blue-600 transition-colors">
-            Learn more about my background →
-          </Link>
         </div>
 
-        <Link
-          href="/resume"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Resume{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            View Noah&apos;s professional experience and education.
-          </p>
-        </Link>
-
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-bold mb-4">Contact</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
-            Interested in collaborating or have a project in mind? I'd love to hear from you! Feel free to reach out for
-            any inquiries or just to say hello.
-          </p>
-          <Link href="/contact" className="text-blue-500 hover:text-blue-600 transition-colors">
-            Get in touch →
-          </Link>
-        </div>
-      </div>
-
-
-      {/* Footer Section - Centered */}
-      <div className="w-full flex justify-center mt-16">
-        <div className="fixed bottom-0 left-0 flex w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:w-auto lg:bg-none">
-          <Link
-            className="flex place-items-center gap-2 p-8 lg:p-0"
-            href="https://github.com/noahnellyy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By Noah Nelson
-          </Link>
-        </div>
-      </div>
-    </main>
-  );
+        {/* Projects Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">Projects</h2>
+          <ul className="space-y-6">
+            {projects.map((project, index) => (
+              <li key={index} className="group">
+                <Link
+                  href={project.link}
+                  className="flex items-center space-x-4 p-4 rounded-lg transition-colors hover:bg-gray-100"
+                >
+                  <div
+                    className={`w-16 h-16 ${project.color} rounded-md flex items-center justify-center overflow-hidden`}
+                  >
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      width={64}
+                      height={64}
+                      className="transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">{project.title}</h3>
+                    <p className="text-gray-600">{project.description}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+    </div>
+  )
 }
+
