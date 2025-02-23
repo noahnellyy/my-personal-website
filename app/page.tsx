@@ -51,19 +51,7 @@ export default function Home() {
       <main className="pt-24 px-8 max-w-5xl mx-auto">
         {/* Profile Section */}
         <div className="mb-16">
-          <div className="relative w-[200px] h-[200px] mb-8">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 shadow-2xl transform -rotate-6"></div>
-            <div className="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden">
-              <Image
-                className="rounded-full"
-                src="/images/me2.jpg"
-                alt="Main Photo"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-              />
-            </div>
-          </div>
+        
           <p className="text-xl text-gray-600 max-w-2xl">
             Mobile developer and software engineer passionate about building innovative and user-friendly applications.
             Specializing in modern mobile technologies with experience in Jetpack Compose, and always eager to learn and
