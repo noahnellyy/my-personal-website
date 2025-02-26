@@ -7,11 +7,11 @@ const projects = [
     description: "Dating Chat Bot",
     color: "bg-secondary",
     link: "https://www.wsj.com/articles/grindr-aims-to-build-the-dating-worlds-first-ai-wingman-8039e091",
-    image: "/images/projectCover.webp",
+    image: "/images/chatBotIcon.webp",
   },
   {
     title: "A-List",
-    description: "AI generated roster",
+    description: "AI Generated Roster",
     color: "bg-primary",
     link: "https://www.bloomberg.com/news/articles/2025-01-21/grindr-plans-chat-summaries-new-discovery-features-in-ai-push",
     image: "/images/projectCover.webp",
@@ -24,6 +24,23 @@ const projects = [
     image: "/placeholder.svg?height=400&width=400",
   },
 ]
+
+const contacts = [
+  {
+    title: "LinkedIn",
+    description: "Connect with me on LinkedIn",
+    color: "bg-blue-600",
+    link: "https://www.linkedin.com/in/nnelson10/",
+    image: "/images/linkedIn.png",
+  },
+  {
+    title: "ReadCV",
+    description: "View my ReadCV",
+    color: "bg-green-600",
+    link: "https://read.cv/noahnellyy",
+    image: "/images/readCV.png",
+  },
+];
 
 export default function Home() {
   return (
@@ -40,9 +57,6 @@ export default function Home() {
             </Link>
             <Link href="/resume" className="hover:text-gray-600">
               résumé.
-            </Link>
-            <Link href="/contact" className="hover:text-gray-600">
-              contact.
             </Link>
           </div>
         </div>
@@ -88,6 +102,49 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* Contact Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6">Contact</h2>
+          <ul className="space-y-6">
+            {contacts.map((contact, index) => (
+              <li key={index} className="group">
+                <Link
+                  href={contact.link}
+                  className="flex items-center space-x-4 p-4 rounded-lg transition-colors hover:bg-gray-100"
+                >
+                  <div className="w-16 h-16 flex items-center justify-center overflow-hidden rounded-md">
+                    <Image
+                      src={contact.image}
+                      alt={contact.title}
+                      width={64}
+                      height={64}
+                      className="rounded-md transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">{contact.title}</h3>
+                    <p className="text-gray-600">{contact.description}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Email Section */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold mb-4">Email Me</h2>
+            <p className="text-gray-600">
+              Feel free to reach out via email at{" "}
+              <a
+                href="mailto:nelson.noah2002@gmail.com"
+                className="text-blue-500 hover:underline"
+              >
+                nelson.noah2002@gmail.com
+              </a>
+            </p>
+          </div>
         </section>
       </main>
     </div>
