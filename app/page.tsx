@@ -53,10 +53,13 @@ export default function Home() {
           </Link>
           <div className="space-x-4 text-sm">
             <Link href="/about" className="hover:text-gray-600">
-              about.
+              ABOUT
             </Link>
             <Link href="/resume" className="hover:text-gray-600">
-              résumé.
+              RÉSUMÉ
+            </Link>
+            <Link href="/about" className="font-bold hover:text-gray-600">
+              HOME
             </Link>
           </div>
         </div>
@@ -106,7 +109,20 @@ export default function Home() {
 
         {/* Contact Section */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Contact</h2>
+          <h2 className="text-2xl font-bold mb-2">Contact</h2>
+          
+          {/* Email Section */}
+          <div className="mb-4">
+            <p className="text-gray-600">
+              Feel free to reach out via email at{" "}
+              <a
+                href="mailto:nelson.noah2002@gmail.com"
+                className="text-blue-500 hover:underline"
+              >
+                nelson.noah2002@gmail.com
+              </a>
+            </p>
+          </div>
           <ul className="space-y-6">
             {contacts.map((contact, index) => (
               <li key={index} className="group">
@@ -131,20 +147,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-
-          {/* Email Section */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-4">Email Me</h2>
-            <p className="text-gray-600">
-              Feel free to reach out via email at{" "}
-              <a
-                href="mailto:nelson.noah2002@gmail.com"
-                className="text-blue-500 hover:underline"
-              >
-                nelson.noah2002@gmail.com
-              </a>
-            </p>
-          </div>
         </section>
       </main>
     </div>

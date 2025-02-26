@@ -6,13 +6,19 @@ export default function AboutHeader() {
       <div className="max-w-5xl mx-auto px-8 py-4 flex justify-between items-center">
         {/* Name/Logo */}
         <Link href="/" className="text-xl font-medium">
-          About Me
+          Noah Nelson
         </Link>
 
         {/* Navigation Links */}
         <div className="space-x-4 text-sm">
+            <Link href="/about" className="font-bold hover:text-gray-600">
+              ABOUT
+            </Link>
+            <Link href="/resume" className="hover:text-gray-600">
+              RÉSUMÉ
+            </Link>
           <Link href="/" className="hover:text-gray-600">
-            home.
+            HOME
           </Link>
         </div>
       </div>
