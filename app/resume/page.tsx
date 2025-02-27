@@ -1,18 +1,9 @@
+import ResumeHeader from "/Users/noahnellyy/Desktop/personal-website/app/resume/resumeHeaderComponent";
+
 export default function Resume() {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-12">Noah Nelson</h1>
-  
-        {/* Contact Section */}
-        <div className="grid grid-cols-[120px_1fr] gap-8 mb-12">
-          <h2 className="font-medium">Contact</h2>
-          <div>
-            <a href="mailto:noah.nelson@uchicago.edu" className="text-blue-600 hover:underline">
-              noah.nelson@uchicago.edu
-            </a>
-            <p>Chicago, IL</p>
-          </div>
-        </div>
+      <div className="max-w-4xl mx-auto px-4 py-12 pt-20">
+        <ResumeHeader/>    
   
         {/* Overview Section */}
         <div className="grid grid-cols-[120px_1fr] gap-8 mb-12">
