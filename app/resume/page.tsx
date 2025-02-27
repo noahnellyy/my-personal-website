@@ -1,4 +1,4 @@
-import ResumeHeader from "/Users/noahnellyy/Desktop/personal-website/app/resume/resumeHeaderComponent";
+import ResumeHeader from "./resumeHeaderComponent";
 
 export default function Resume() {
     return (
