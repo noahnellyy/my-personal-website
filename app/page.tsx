@@ -7,7 +7,7 @@ const projects = [
     description: "Dating Chat Bot",
     color: "bg-secondary",
     link: "https://www.wsj.com/articles/grindr-aims-to-build-the-dating-worlds-first-ai-wingman-8039e091",
-    image: "/images/chatBotIcon.webp",
+    image: "/images/android-icon.webp",
   },
   {
     title: "A-List",
@@ -17,11 +17,11 @@ const projects = [
     image: "/images/projectCover.webp",
   },
   {
-    title: "Project Three",
-    description: "UI/UX design system",
-    color: "bg-purple-500",
-    link: "#",
-    image: "/placeholder.svg?height=400&width=400",
+    title: "Drone Flight Modes",
+    description: "Advanced Flight Modes for DJI Drones",
+    color: "bg-primary",
+    link: "https://www.youtube.com/watch?v=BjOdJLOV0KY",
+    image: "/images/dji-icon.jpeg",
   },
 ]
 
@@ -94,7 +94,7 @@ export default function Home() {
                       alt={project.title}
                       width={64}
                       height={64}
-                      className="transition-transform duration-300 group-hover:scale-110"
+                      className="transition-transform duration-300 group-hover:scale-110 bg-white"
                     />
                   </div>
                   <div>
