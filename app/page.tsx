@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="pt-24 px-8 max-w-5xl mx-auto">
+      <main className="pt-24 px-6 max-w-5xl mx-auto">
         {/* Profile Section */}
         <div className="mb-16">
         
