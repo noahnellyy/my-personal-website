@@ -94,7 +94,7 @@ export default function Home() {
                       alt={project.title}
                       width={64}
                       height={64}
-                      className="transition-transform duration-300 group-hover:scale-110 bg-white"
+                      className="transition-transform duration-300 group-hover:scale-110 bg-white object-cover"
                     />
                   </div>
                   <div>
