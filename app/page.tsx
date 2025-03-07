@@ -47,10 +47,8 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50">
-        <div className="max-w-5xl mx-auto px-8 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-medium">
-            Noah Nelson
-          </Link>
+        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+          <Link href="/" className="text-xl font-medium">Noah Nelson</Link>
           <div className="space-x-4 text-sm">
             <Link href="/about" className="hover:text-gray-600">
               ABOUT
