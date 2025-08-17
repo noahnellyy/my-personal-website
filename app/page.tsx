@@ -17,6 +17,13 @@ const projects = [
     image: "/images/projectCover.webp",
   },
   {
+    title: "Taken On Grindr",
+    description: "Photo Authentication",
+    color: "bg-primary",
+    link: "https://www.grindr.com/blog/announcing-taken-on-grindr-real-in-app-photos-for-a-better-grindr-experience",
+    image: "/images/TOGV2.png",
+  },
+  {
     title: "Drone Flight Modes",
     description: "Advanced Flight Modes for DJI Drones",
     color: "bg-primary",
