@@ -3,6 +3,13 @@ import Link from "next/link"
 
 const projects = [
   {
+    title: "AI-Powered Workflow",
+    description: "Using Claude + Figma MCP to eliminate manual view transcription",
+    color: "bg-primary",
+    link: "https://medium.com/grindr-engineering/why-i-stopped-writing-simple-view-components-99a4f970ad1f",
+    image: "/images/claudeFigma.webp",
+  },
+  {
     title: "AI Wingman",
     description: "Dating Chat Bot",
     color: "bg-secondary",
@@ -84,22 +91,19 @@ export default function Home() {
         {/* Projects Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Projects</h2>
-          <ul className="space-y-6">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {projects.map((project, index) => (
               <li key={index} className="group">
                 <Link
                   href={project.link}
                   className="flex items-center space-x-4 p-4 rounded-lg transition-colors hover:bg-gray-100"
                 >
-                  <div
-                    className={`w-16 h-16 ${project.color} rounded-md flex items-center justify-center overflow-hidden`}
-                  >
+                  <div className={`w-16 aspect-square ${project.color} rounded-md overflow-hidden relative shrink-0`}>
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
-                      width={64}
-                      height={64}
-                      className="transition-transform duration-300 group-hover:scale-110 bg-white object-cover"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
                   <div>
