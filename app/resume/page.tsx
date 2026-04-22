@@ -33,13 +33,13 @@ export default function Resume() {
                   <p className="mb-2 italic">Building high-impact features that improve the user experience:</p>
                   <ul className="list-none space-y-1 pl-5">
                     <li className="relative pl-3">
-                        <span className="absolute left-0">•</span> Dating Wingman
+                        <span className="absolute left-0">•</span> Discover
                     </li>
                     <li className="relative pl-3">
                         <span className="absolute left-0">•</span> Taken On Grindr
                         </li>
                     <li className="relative pl-3">
-                        <span className="absolute left-0">•</span> A-list
+                        <span className="absolute left-0">•</span> Interests
                         </li>
                   </ul>
                 </div>
