@@ -47,13 +47,6 @@ const contacts = [
     link: "https://www.linkedin.com/in/noahnelson2/",
     image: "/images/linkedIn.png",
   },
-  {
-    title: "ReadCV",
-    description: "View my ReadCV",
-    color: "bg-green-600",
-    link: "https://read.cv/noahnellyy",
-    image: "/images/readCV.png",
-  },
 ];
 
 export default function Home() {
