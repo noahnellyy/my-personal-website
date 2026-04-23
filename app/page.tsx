@@ -44,7 +44,7 @@ const contacts = [
     title: "LinkedIn",
     description: "Connect with me on LinkedIn",
     color: "bg-blue-600",
-    link: "https://www.linkedin.com/in/nnelson10/",
+    link: "https://www.linkedin.com/in/noahnelson2/",
     image: "/images/linkedIn.png",
   },
   {
